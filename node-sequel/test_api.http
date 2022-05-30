@@ -1,0 +1,12 @@
+GET http://localhost:8080/api/tutorials/2
+
+###
+
+POST http://localhost:8080/api/tutorials
+Content-Type: application/json
+
+{
+    "title": "tut2",
+    "description": "very good tutorials",
+    "published": true
+}
