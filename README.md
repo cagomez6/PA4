@@ -14,7 +14,7 @@ The user can delete an existing product. <br>
 <img width="313" alt="" src="https://user-images.githubusercontent.com/57085518/171068529-f22ef216-2b9a-48d6-bcd9-0b4ddde07b02.png">
 
 ## Requirement 4
-The user can search products by title, rating, price range. <br>
+The user can search products by title, rating, and price range. <br>
 <img width="490" alt="" src="https://user-images.githubusercontent.com/57085518/171068800-0df9c6b7-fed8-48af-9f84-a8c741d342b0.png">
 <img width="728" alt="" src="https://user-images.githubusercontent.com/57085518/171068888-5cf158a8-1d5b-4d16-8471-c4f7364b8ce5.png">
 
