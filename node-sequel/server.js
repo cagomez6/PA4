@@ -2,6 +2,8 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 
+const fileUpload = require('express-fileupload');
+
 const app = express();
 
 var corsOptions = {
@@ -15,6 +17,8 @@ app.use(bodyParser.json());
 
 // parse requests of content-type - application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }));
+
+app.use(fileUpload());
 
 const db = require("./app/models");
 

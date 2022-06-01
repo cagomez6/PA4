@@ -216,6 +216,18 @@ export default class Product extends Component {
                         name="url"
                     />
                 </div>
+
+                <form
+                    action='http://localhost:8080/api/products/upload' 
+                    method='post' 
+                    encType="multipart/form-data"
+                    class="form-inline">
+                    <div class="form-group">
+                        <input type="file" class="form-control-file" name="file"/>
+                        <button type="submit" className="btn btn-primary mt-2">Upload</button>
+                    </div>
+                </form> 
+
             </form>
 
             <button

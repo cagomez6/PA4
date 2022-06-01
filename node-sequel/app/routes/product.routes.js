@@ -20,6 +20,8 @@ module.exports = app => {
   
     // Delete all Products
     router.delete("/", products.deleteAll);
+
+    router.post("/upload", products.upload);
   
     app.use('/api/products', router);
   };

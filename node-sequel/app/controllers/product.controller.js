@@ -140,3 +140,19 @@ exports.deleteAll = (req, res) => {
         });
     });
 };
+
+exports.upload = (req, res) => {
+    if (!req.files) {
+        return res.status(400).send('No files were uploaded.');
+    }
+  
+    const file = req.files.file;
+
+    var path = require('path');
+  
+    file.mv(path.join(__dirname, '../../../react/public/sources/' + file.name), function(err) {
+        if (err) {
+            return res.status(500).send(err);
+        }
+    });
+};
