@@ -16,13 +16,13 @@ export default class AddProduct extends Component {
     this.state = {
         id: null,
         title: "",
-        category: "",
+        category: "Men",
         color: "",
         price: 0,
-        rating: 0, 
+        rating: 1, 
         url: "",
-
-        submitted: false
+	
+	submitted: false
     };
   }
 

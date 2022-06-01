@@ -18,18 +18,18 @@ export default class Product extends Component {
         currentProduct: {
             id: null,
             title: "",
-            category: "",
+            category: "Men",
             color: "",
             price: 0,
-            rating: 0, 
+            rating: 1, 
             url: ""
-      },
-      message: ""
+        },
+        message: ""
     };
   }
 
   componentDidMount() {
-      this.getProduct(this.props.match.params.id);
+    this.getProduct(this.props.match.params.id);
   }
 
   onChangeTitle(e) {
@@ -175,6 +175,18 @@ export default class Product extends Component {
                 </div>
 
                 <div className="form-group">
+                    <label htmlFor="color">Color</label>
+                    <input
+                        type="text"
+                        className="form-control"
+                        id="color"
+                        value={currentProduct.color}
+                        onChange={this.onChangeColor}
+                        name="color"
+                    />
+                </div>
+
+                <div className="form-group">
                     <label htmlFor="price">Price</label>
                     <input
                         type="number"
@@ -221,6 +233,7 @@ export default class Product extends Component {
                     action='http://localhost:8080/api/products/upload' 
                     method='post' 
                     encType="multipart/form-data"
+                    accept="image/*"
                     class="form-inline">
                     <div class="form-group">
                         <input type="file" class="form-control-file" name="file"/>
